@@ -17,3 +17,20 @@
 // BottomNavigationBar widget is used to create a bottom navigation bar.
 // FloatingActionButton widget is used to create a floating action button.
 
+// When styling Text widgets, we can use the TextStyle class to set the font size, font weight, font style, color, background color, and more.
+// But with font family, we need to download that specific font from Google Fonts and create a folder called fonts, and make changes to pubspec.yaml in the fontFamily section and add the font from there following the format.
+
+// ---------------------
+
+// Difference between Stateless Widgets and Stateful Widgets
+// Stateless widgets mean that its state of the widget cannot be changed overtime. Immutable.
+// Stateful widgets mean that its state of the widget can be changed overtime. Mutable.
+
+// ---------------------
+// Now we don't want to do hot reload everytime we make changes to the code. We want to see the changes in real time. So we use hot restart. It's like refreshing the page in the browser.
+
+// To do this, we need to declare a class called Home and this class is gonna contain all the widgets for the home screen. And this Home class extends from StatelessWidget.
+
+// Now there's a method called build() that we need to override. The reason for this is that StatelessWidget has ITS OWN build method and so we need to override it with:
+// @override
+// So that the screen displays the Home class reactively.
