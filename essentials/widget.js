@@ -9,3 +9,11 @@
 // On text widgets there are: style, textAlign, overflow, maxLines etc.
 // On button widgets there are: color, eleveation, disabledColor, enabled etc.
 
+// ---------------------
+
+// Scaffold Widget allows us to implement the basic material design visual layout structure.
+// AppBar widget is used to create a toolbar at the top of the screen.
+// Drawer widget is used to create a drawer at the left side of the screen.
+// BottomNavigationBar widget is used to create a bottom navigation bar.
+// FloatingActionButton widget is used to create a floating action button.
+
