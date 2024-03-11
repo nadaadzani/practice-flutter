@@ -84,3 +84,18 @@
     print(userTest.name);
     print(userTest.greet());
 } */
+
+// Inheritance
+// In Dart, we can use the extends keyword to inherit properties and methods from another class.
+// For example:
+/*  (Since we have the User class)
+    class SuperUser extends User {
+        SuperUser(String name, int age) : super(name, age);
+
+        // The super in here is similar to JavaScript super() except that it has a colon in front of it.
+
+        void superGreet() {
+            print('I am a super user');
+        }
+    }
+*/
