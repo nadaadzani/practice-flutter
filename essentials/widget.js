@@ -34,3 +34,52 @@
 // Now there's a method called build() that we need to override. The reason for this is that StatelessWidget has ITS OWN build method and so we need to override it with:
 // @override
 // So that the screen displays the Home class reactively.
+
+// ---------------------
+// Adding images in Flutter
+// You can add images in Flutter in two ways:
+// 1. Adding images from the internet by using NetworkImage widget.
+// 2. Adding images from the local storage by using AssetImage widget.
+// But first these widgets need to be inside of a parent image widget called Image
+
+// To use NetworkImage widget, simply pass in the URL of the image as a string.
+// But AssetImage, you need to change the pubspec.yaml file to include the image in the assets section.
+
+// Like this:
+// assets:
+//   - images/your_image.png
+
+// Tip: you can include all images by typing 'images/' and this will include all of them.
+
+// Then you can use the AssetImage widget and pass in the path
+
+// Tip: you can use shortcuts to the Image widget by just typing image.asset or image.network
+
+
+// ---------------------
+// Adding icons and buttons in Flutter
+// You can add icons in Flutter by using the Icon widget. You can use the Icons class to get the list of all the available icons in Flutter.
+// e.g. :
+/*
+    child: Icon(
+      Icons.add,
+      color: Colors.white,
+    ),
+*/
+
+
+// With newer version of Flutter, using FlatButton, RaisedButton won't work anymore since it is deprecated.
+// Instead we use TextButton, ElevatedButton, and OutlinedButton.
+
+// e.g. :
+/*
+    child: ElevatedButton(
+      onPressed: () {},
+      child: Text('click me'),
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.blue[600]),
+      ),
+    ),
+*/
+
+// And styling the buttons come easier with the ButtonStyle widget.
