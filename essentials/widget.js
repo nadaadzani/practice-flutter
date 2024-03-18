@@ -70,6 +70,9 @@
 
 // With newer version of Flutter, using FlatButton, RaisedButton won't work anymore since it is deprecated.
 // Instead we use TextButton, ElevatedButton, and OutlinedButton.
+// And styling the buttons comes easier with the ButtonStyle widget.
+
+// Difference between TextButton and ElevatedButton is that ElevatedButton has a shadow or background meanwhile TextButton does not.
 
 // e.g. :
 /*
@@ -82,4 +85,45 @@
     ),
 */
 
-// And styling the buttons come easier with the ButtonStyle widget.
+// To add a button with an icon in it, you can use the ElevatedButton.icon widget and pass in the icon and label as the child.
+// e.g. :
+/*
+    child: ElevatedButton.icon(
+      onPressed: () {},
+      icon: Icon(Icons.mail),
+      label: Text('Mail'),
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.blue[600]),
+      ),
+    ),
+*/
+
+// You can also turn an icon into a button by using the IconButton widget and pass in the icon and the onPressed function.
+// e.g. :
+/*
+    child: IconButton(
+      onPressed: () {},
+      icon: Icon(Icons.mail),
+      color: Colors.blue[600],
+    ),
+*/
+
+// ---------------------
+// Container and Padding widgets
+// Container widget is used to create a container with a border, padding, margin, and background color.
+// Padding widget is used to create padding around the child widget and is used as more of a specific widget.
+// So you cannot use margin in the Padding widget.
+
+// e.g. :
+// Essentially a div if it were an HTML element
+/*
+    child: Container(
+      padding: EdgeInsets.all(20.0),
+      margin: EdgeInsets.all(20.0),
+      color: Colors.grey[400],
+      child: Text('hello'),
+    ),
+*/
+
+// To add padding and margin, there's a widget called EdgeInsets that we can use to add padding and margin.
+// It has a few methods like all, only, symmetric, and fromLTRB.
