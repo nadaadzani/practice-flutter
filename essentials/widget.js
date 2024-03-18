@@ -127,3 +127,71 @@
 
 // To add padding and margin, there's a widget called EdgeInsets that we can use to add padding and margin.
 // It has a few methods like all, only, symmetric, and fromLTRB.
+
+// ---------------------
+// Rows and Columns
+
+// Row widget is used to create a row of items.
+// Similar to flexbox in CSS.
+
+// e.g. :
+
+// mainAxisAlignment is like justify-content in CSS
+// crossAxisAlignment is like align-items in CSS
+/*
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('hello'),
+        FlatButton(onPressed: () {}, child: Text('click me')),
+        Container(
+          color: Colors.cyan,
+          padding: EdgeInsets.all(30.0),
+          child: Text('inside container'),
+        ),
+      ],
+    ),
+*/
+
+// Column widget is used to create a column of items.
+// e.g. :
+// You can also put a row inside a column and vice versa.
+// Similar to nested containers in HTML.
+/*
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Text('hello'),
+            FlatButton(onPressed: () {}, child: Text('click me')),
+          ],
+        ),
+        Text('hello'),
+        FlatButton(onPressed: () {}, child: Text('click me')),
+        Container(
+          color: Colors.cyan,
+          padding: EdgeInsets.all(30.0),
+          child: Text('inside container'),
+        ),
+      ],
+    ),
+*/
+
+// ---------------------
+// Expanded widget
+// Expanded widget is used to expand a widget to fill the available space.
+// It's like flex-grow in CSS.
+// e.g. :
+// It also accepts a method called flex which is similar to flex-basis in CSS.
+/*
+    child: Row(
+      children: [
+        Expanded(flex: 3, child: Container(color: Colors.red, height: 100.0)),
+        Expanded(child: Container(color: Colors.green, height: 100.0)),
+        Expanded(child: Container(color: Colors.blue, height: 100.0)),
+      ],
+    ),
+*/
